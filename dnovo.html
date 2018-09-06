@@ -17,8 +17,8 @@
           <option value=3>Armazenamento</option>
     </select>
    <button type="button" onclick="mFuncao()">Escolher</button>
-    <br><br> Intervalo de temperatura: entre <a id="tempMin"></a> e <c id="tempMax"></c>
-    <br>Intervalo de umidade: entre <a id="umiMin"></a> e <c id="umiMax"></c>
+    <br><br> Intervalo de temperatura: entre <a id="tempMin"></a> ºC e <c id="tempMax"></c> ºC
+    <br>Intervalo de umidade: entre <a id="umiMin"></a>% e <c id="umiMax"></c>%
 
     
 </body>
@@ -26,20 +26,20 @@
 <script>
     var tempCozimentoMax = 10 ;
     var tempCozimentoMin = 5 ;
-    var tempFermentacaoMax =  1;
-    var tempFermentacaoMin =  1;
-    var tempMaturacaoMax = 1 ;
-    var tempMaturacaoMin = 1 ;
-    var tempArmazenamentoMax =  1;
-    var tempArmazenamentoMin =  1;
-    var umiCozimentoMax = 1 ;
-    var umiCozimentoMin = 1 ;
-    var umiFermentacaoMax = 1; 
-    var umiFermentacaoMin = 1;
-    var umiMaturacaoMax = 1 ;
-    var umiMaturacaoMin = 1 ;
-    var umiArmazenamentoMax = 1 ;
-    var umiArmazenamentoMin = 1 ;
+    var tempFermentacaoMax =  11;
+    var tempFermentacaoMin =  12;
+    var tempMaturacaoMax = 13 ;
+    var tempMaturacaoMin = 14 ;
+    var tempArmazenamentoMax =  15;
+    var tempArmazenamentoMin =  16;
+    var umiCozimentoMax = 17 ;
+    var umiCozimentoMin = 18 ;
+    var umiFermentacaoMax = 19; 
+    var umiFermentacaoMin = 20;
+    var umiMaturacaoMax = 21 ;
+    var umiMaturacaoMin = 22 ;
+    var umiArmazenamentoMax = 31 ;
+    var umiArmazenamentoMin = 41 ;
     var maxTemp = new Array(tempCozimentoMax, tempFermentacaoMax, tempMaturacaoMax, tempArmazenamentoMax);
     var minTemp = new Array(tempCozimentoMin, tempFermentacaoMin, tempMaturacaoMin, tempArmazenamentoMin);
     var maxUmi= new Array(umiCozimentoMax, umiFermentacaoMax, umiMaturacaoMax, umiArmazenamentoMax);
