@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Etapa:</p>
+    <select id="etapa" >
+          <option value=-1>        </option>
+          <option value=0>Cozimento</option>
+          <option value=1>Fermentação</option>
+          <option value=2>Maturação</option>
+          <option value=3>Armazenamento</option>
+    </select>
+   <button type="button" onclick="mFuncao()">Escolher</button>
+    <br><br> Intervalo de temperatura: entre <a id="tempMin"></a> e <c id="tempMax"></c>
+    <br>Intervalo de umidade: entre <a id="umiMin"></a> e <c id="umiMax"></c>
+
+    
+</body>
+</html>
+<script>
+    var tempCozimentoMax = 10 ;
+    var tempCozimentoMin = 5 ;
+    var tempFermentacaoMax =  1;
+    var tempFermentacaoMin =  1;
+    var tempMaturacaoMax = 1 ;
+    var tempMaturacaoMin = 1 ;
+    var tempArmazenamentoMax =  1;
+    var tempArmazenamentoMin =  1;
+    var umiCozimentoMax = 1 ;
+    var umiCozimentoMin = 1 ;
+    var umiFermentacaoMax = 1; 
+    var umiFermentacaoMin = 1;
+    var umiMaturacaoMax = 1 ;
+    var umiMaturacaoMin = 1 ;
+    var umiArmazenamentoMax = 1 ;
+    var umiArmazenamentoMin = 1 ;
+    var maxTemp = new Array(tempCozimentoMax, tempFermentacaoMax, tempMaturacaoMax, tempArmazenamentoMax);
+    var minTemp = new Array(tempCozimentoMin, tempFermentacaoMin, tempMaturacaoMin, tempArmazenamentoMin);
+    var maxUmi= new Array(umiCozimentoMax, umiFermentacaoMax, umiMaturacaoMax, umiArmazenamentoMax);
+    var minUmi = new Array(umiCozimentoMin, umiFermentacaoMin, umiMaturacaoMin, umiArmazenamentoMin);    
+
+        function mFuncao(){
+        var x = Number(document.getElementById("etapa").value);
+        if(x < 0){
+            alert("Você deve escolher uma etapa");
+        }
+        if(x == 0){
+            alert("0");
+            document.getElementById("tempMax").innerHTML = tempCozimentoMax;
+            document.getElementById("tempMin").innerHTML = tempCozimentoMin;
+            document.getElementById("umiMax").innerHTML = umiCozimentoMax;
+            document.getElementById("umiMin").innerHTML = umiCozimentoMin;
+        }
+        if(x == 1){
+            alert("1");
+            document.getElementById("tempMax").innerHTML = tempFermentacaoMax;
+            document.getElementById("tempMin").innerHTML = tempFermentacaoMin;
+            document.getElementById("umiMax").innerHTML = umiFermentacaoMax;
+            document.getElementById("umiMin").innerHTML = umiFermentacaoMin;
+        }
+        if(x == 2){
+            alert("2");
+            document.getElementById("tempMax").innerHTML = tempMaturacaoMax;
+            document.getElementById("tempMin").innerHTML = tempMaturacaoMin;
+            document.getElementById("umiMax").innerHTML = umiMaturacaoMax;
+            document.getElementById("umiMin").innerHTML = umiMaturacaoMin;
+            
+        }
+        if(x == 3){
+            alert("3");
+            document.getElementById("tempMax").innerHTML = tempArmazenamentoMax;
+            document.getElementById("tempMin").innerHTML = tempArmazenamentoMin;
+            document.getElementById("umiMax").innerHTML = umiArmazenamentoMax;
+            document.getElementById("umiMin").innerHTML = umiArmazenamentoMin;
+            
+        }
+        }
+</script>
